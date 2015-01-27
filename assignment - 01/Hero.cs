@@ -8,13 +8,17 @@ namespace assignment___01
 {
     class Hero
     {
-        //Q1
+        //aaaaaaaaaaaaaaaaa
         private int strength;
         private int speed;
         private int health;
 
 
-        //Q2
+        //cccccccccccccccccc
+        public Hero(string name)
+        {
+            generateAbilities();
+        }
         public string name
         {
             get
@@ -26,10 +30,11 @@ namespace assignment___01
                 name = value;
             }
         }
+            
 
-        //Q3
+        
 
-
+        //dddddddddddddddddddddddddddd
         private void generateAbilities()
         {
             Random random = new Random();
@@ -46,13 +51,17 @@ namespace assignment___01
 
             Random random = new Random();
             int randomNumber = random.Next(0, 6);
-            hitAttempt(randomNumber);
-
+            bool attemptSuccess = hitAttempt();
+            if ( attemptSuccess == true) 
+            {
+                hitDamage();
+            } 
+            
 
             Console.WriteLine("Damage is {0}", hitDamage());
         }
-        public bool hitAttempt(int getNumber)
-        {
+        public bool hitAttempt()
+ {
 
             Random random = new Random();
             int randomNumber = random.Next(0, 5);
@@ -75,6 +84,9 @@ namespace assignment___01
                 case 4:
                     return false;
                     break;
+                default:
+                    return false;
+
             }
 
         }
