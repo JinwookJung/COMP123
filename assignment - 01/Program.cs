@@ -10,9 +10,17 @@ namespace assignment___01
     {
         static void Main(string[] args)
         {
-            Hero myHero = new Hero();
+            string name;
+            
+            Console.Write("Enter your hero name:");
+            name = Console.ReadLine();
+
+            Hero myHero = new Hero(name);
             myHero.show();
-            myHero.fight(); 
+            myHero.fight();
+
+            Console.WriteLine("Press any key to exit");
+            Console.ReadKey();
         }
     }
 }

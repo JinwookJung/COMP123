@@ -17,6 +17,7 @@ namespace assignment___01
         //cccccccccccccccccc
         public Hero(string name)
         {
+            Console.WriteLine("Hero name is {0}",name);
             generateAbilities();
         }
         public string name
@@ -39,12 +40,9 @@ namespace assignment___01
         {
             Random random = new Random();
 
-            int strength = random.Next(1, 101);
-            int speed = random.Next(1, 101);
-            int health = random.Next(1, 101);
-
-
-            Console.WriteLine(strength);
+            this.strength = random.Next(1, 101);
+            this.speed = random.Next(1, 101);
+            this.health = random.Next(1, 101);
         }
         public void fight()
         {
@@ -52,13 +50,14 @@ namespace assignment___01
             Random random = new Random();
             int randomNumber = random.Next(0, 6);
             bool attemptSuccess = hitAttempt();
+            
             if ( attemptSuccess == true) 
             {
                 hitDamage();
+                
             } 
             
-
-            Console.WriteLine("Damage is {0}", hitDamage());
+            Console.WriteLine("Your Hero's damage is {0}!!", hitDamage());
         }
         public bool hitAttempt()
  {
@@ -101,8 +100,8 @@ namespace assignment___01
             return damage;
         }
         public void show()
-        { 
-            Console.WriteLine("Strength is {0},Speed is {1}, Health is {2}", strength, speed, health);
+        {
+            Console.WriteLine("Your hero's Strength is {0}, Speed is {1}, Health is {2}", strength, speed, health);
         }
     }
 }
