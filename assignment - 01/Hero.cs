@@ -8,18 +8,19 @@ namespace assignment___01
 {
     class Hero
     {
-        //aaaaaaaaaaaaaaaaa
+        // 1-a PRIVATE PROPERTIES ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         private int strength;
         private int speed;
         private int health;
 
 
-        //cccccccccccccccccc
+        // 1-c /CONSTRUCTOR METHOD ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         public Hero(string name)
         {
             Console.WriteLine("Hero name is {0}",name);
             generateAbilities();
         }
+        // 1-b /PUBLIC PROPERTY ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         public string name
         {
             get
@@ -31,11 +32,11 @@ namespace assignment___01
                 name = value;
             }
         }
-            
 
-        
 
-        //dddddddddddddddddddddddddddd
+
+
+        // 1-d /PRIVATE METHOD ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         private void generateAbilities()
         {
             Random random = new Random();
@@ -44,6 +45,7 @@ namespace assignment___01
             this.speed = random.Next(1, 101);
             this.health = random.Next(1, 101);
         }
+        // 1-e /PUBLIC METHOD ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         public void fight()
         {
 
@@ -59,6 +61,7 @@ namespace assignment___01
             
             Console.WriteLine("Your Hero's damage is {0}!!", hitDamage());
         }
+        // 1-f /PUBLIC METHOD +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         public bool hitAttempt()
  {
 
@@ -70,25 +73,26 @@ namespace assignment___01
             {
                 case 0:
                     return true;
-                    break;
+                    
                 case 1:
                     return false;
-                    break;
+                  
                 case 2:
                     return false;
-                    break;
+                    
                 case 3:
                     return false;
-                    break;
+                    
                 case 4:
                     return false;
-                    break;
+                    
                 default:
                     return false;
 
             }
 
         }
+        // 1-g /PRIVATE METHOD +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         private int hitDamage()
         {
             int damage;
@@ -99,6 +103,7 @@ namespace assignment___01
             damage = strength * randomNumber;
             return damage;
         }
+        // 1-h /PUBLIC METHOD +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         public void show()
         {
             Console.WriteLine("Your hero's Strength is {0}, Speed is {1}, Health is {2}", strength, speed, health);

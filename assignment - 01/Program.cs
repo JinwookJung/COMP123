@@ -8,6 +8,7 @@ namespace assignment___01
 {
     class Program
     {
+        //2 /IMPLEMENT THE HERO CLASS
         static void Main(string[] args)
         {
             string name;
